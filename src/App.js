@@ -215,16 +215,16 @@ class App extends Component {
     })
 
   }
-back(){
-  this.setState({
-    currentRoutine: null,
-    taskIndex: -1,
-    currentTask: null,
-    started: false,
-    routineTimerRunning: false,
-    taskTimerRunning: false,
- })
-}
+  back() {
+    this.setState({
+      currentRoutine: null,
+      taskIndex: -1,
+      currentTask: null,
+      started: false,
+      routineTimerRunning: false,
+      taskTimerRunning: false,
+    })
+  }
   taskCompleted = () => {
     this.taskIterator()
   }
@@ -253,22 +253,25 @@ back(){
   }
 
   render() {
-    console.log('render with currentRoutine: '+ this.state.currentRoutine);
+    console.log('render with currentRoutine: ' + this.state.currentRoutine);
 
     return (
 
       <div className="App">
-        {this.state.currentRoutine === null ? (
-          <div>
-            <h1>
-              Choose a routine
+        <div className="container">
+
+          {this.state.currentRoutine === null ? (
+            <div className="row">
+              <h1>
+                Choose a routine
             </h1>
-            <button onClick={this.routineSelector.bind(this)} id="morning">Morning Routine</button>
-            <button onClick={this.routineSelector.bind(this)} id="night">Night Routine</button>
-            <button onClick={this.routineSelector.bind(this)} id="basement">Basement Routine</button>
-            <button onClick={this.routineSelector.bind(this)} id="office">Office Routine</button>
-          </div>
-        ) : <Routine routine={this.state.currentRoutine} back={this.back.bind(this)} />}
+              <button onClick={this.routineSelector.bind(this)} id="morning">Morning Routine</button>
+              <button onClick={this.routineSelector.bind(this)} id="night">Night Routine</button>
+              <button onClick={this.routineSelector.bind(this)} id="basement">Basement Routine</button>
+              <button onClick={this.routineSelector.bind(this)} id="office">Office Routine</button>
+            </div>
+          ) : <Routine routine={this.state.currentRoutine} back={this.back.bind(this)} />}
+        </div>
       </div>
 
     )

@@ -57,23 +57,43 @@ class Routine extends Component {
       (false)
       :
       <div className="App">
+        <div className="container">
+          <div className="row">
 
-        <div className="timers" style={style}>
-          <Timer timerType="routine" started={this.state.started} taskIndex={this.state.taskIndex} title={this.state.currentRoutine.name} time={this.state.currentRoutine.totalTime} />
-          <Timer timerType="task" started={this.state.started} taskIndex={this.state.taskIndex} title={this.state.currentTask.name} time={this.state.currentTask.time} />
+
+            <div className="timers" style={style}>
+              <div className="col border">
+                <Timer timerType="routine" started={this.state.started} taskIndex={this.state.taskIndex} title={this.state.currentRoutine.name} time={this.state.currentRoutine.totalTime} />
+              </div>
+              <div className="col border">
+                <Timer timerType="task" started={this.state.started} taskIndex={this.state.taskIndex} title={this.state.currentTask.name} time={this.state.currentTask.time} />
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col border">
+              {this.state.started ? (
+                <div className="row">
+                  <div className="col border">
+                    <CurrentTask
+                      name={this.state.currentTask.name}
+                      click={this.taskCompleted}
+                    />
+                  </div>
+                </div>
+              )
+                : <button onClick={this.start}>Start</button>
+              }
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col border">
+              <button onClick={this.props.back.bind(this)}>Back</button>
+            </div>
+          </div>
+
         </div>
-
-        {this.state.started ? (
-          <CurrentTask
-            name={this.state.currentTask.name}
-            click={this.taskCompleted}
-          />
-        )
-          : <button onClick={this.start}>Start</button>
-        }
-
-        <button onClick={this.props.back.bind(this)}>Back</button>
-
       </div>
       ;
   }

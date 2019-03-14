@@ -263,16 +263,21 @@ class App extends Component {
           {this.state.currentRoutine === null ? (
             <div>
               <div className="row">
-                <h1>
-                  Choose a routine
+                <div className="col-12">
+
+                  <h1 className="text-center">
+                    Choose a routine
             </h1>
 
+                </div>
               </div>
               <div className="row">
-                <button className="btn" onClick={this.routineSelector.bind(this)} id="morning">Morning Routine</button>
-                <button className="btn" onClick={this.routineSelector.bind(this)} id="night">Night Routine</button>
-                <button className="btn" onClick={this.routineSelector.bind(this)} id="basement">Basement Routine</button>
-                <button className="btn" onClick={this.routineSelector.bind(this)} id="office">Office Routine</button>
+                <div className="col-12">
+                  <button className="btn" onClick={this.routineSelector.bind(this)} id="morning">Morning Routine</button>
+                  <button className="btn" onClick={this.routineSelector.bind(this)} id="night">Night Routine</button>
+                  <button className="btn" onClick={this.routineSelector.bind(this)} id="basement">Basement Routine</button>
+                  <button className="btn" onClick={this.routineSelector.bind(this)} id="office">Office Routine</button>
+                </div>
               </div>
             </div>
           ) : <Routine routine={this.state.currentRoutine} back={this.back.bind(this)} />}

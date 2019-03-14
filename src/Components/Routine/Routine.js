@@ -58,14 +58,14 @@ class Routine extends Component {
       :
       <div className="App">
         <div className="container">
-          <div className="row">
+          <div>
 
 
-            <div className="timers" style={style}>
-              <div className="col border">
+            <div className="row timers" style={style}>
+              <div className="col-6 border">
                 <Timer timerType="routine" started={this.state.started} taskIndex={this.state.taskIndex} title={this.state.currentRoutine.name} time={this.state.currentRoutine.totalTime} />
               </div>
-              <div className="col border">
+              <div className="col-6 border">
                 <Timer timerType="task" started={this.state.started} taskIndex={this.state.taskIndex} title={this.state.currentTask.name} time={this.state.currentTask.time} />
               </div>
             </div>
@@ -82,14 +82,14 @@ class Routine extends Component {
                   </div>
                 </div>
               )
-                : <button onClick={this.start}>Start</button>
+                : <button className="btn-success btn btn-lg btn-block" onClick={this.start}>Start</button>
               }
             </div>
           </div>
 
           <div className="row">
             <div className="col border">
-              <button onClick={this.props.back.bind(this)}>Back</button>
+              <button className="btn btn-danger btn-lg btn-block" onClick={this.props.back.bind(this)}>Back</button>
             </div>
           </div>
 

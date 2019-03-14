@@ -265,6 +265,9 @@ class App extends Component {
               <h1>
                 Choose a routine
             </h1>
+
+            </div>
+            <div className="row">
               <button onClick={this.routineSelector.bind(this)} id="morning">Morning Routine</button>
               <button onClick={this.routineSelector.bind(this)} id="night">Night Routine</button>
               <button onClick={this.routineSelector.bind(this)} id="basement">Basement Routine</button>

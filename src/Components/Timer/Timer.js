@@ -71,14 +71,14 @@ class Timer extends React.Component {
             seconds: sec
         })
         if (min === 0 & sec === 0) {
-            var promise = bell.play();
-            if (promise !== undefined) {
-                promise.then(_ => {
-                    bell.play();
-                }).catch(error => {
-                    console.log(error)
-                });
-            }
+            // var promise = bell.play();
+            // if (promise !== undefined) {
+            //     promise.then(_ => {
+            //         bell.play();
+            //     }).catch(error => {
+            //         console.log(error)
+            //     });
+            // }
             alert("time is up")
             clearInterval(this.intervalHandle);
         }

@@ -9,9 +9,13 @@ class Timer extends React.Component {
 
     constructor(props) {
         super(props);
+        let min = props.time;
+        if (min < 10) {
+            min = "0" + min;
+        }
         this.state = {
             seconds: '00',   // responsible for the seconds 
-            minutes: props.time  // responsible for the minutes
+            minutes:min  // responsible for the minutes
         }
         this.secondsRemaining = '';
         this.intervalHandle = '';
@@ -30,10 +34,14 @@ class Timer extends React.Component {
             this.secondsRemaining = ''
             clearInterval(this.intervalHandle)
             this.secondsRemaining = ''
-
+            let min = nextprops.time;
+            if (min < 10) {
+                min = "0" + min;
+            }
+    
             this.setState({
                 seconds: '00',   // responsible for the seconds 
-                minutes: nextprops.time  // responsible for the minutes
+                minutes: min  // responsible for the minutes
             })
             setTimeout(() => {
 
@@ -51,24 +59,50 @@ class Timer extends React.Component {
     tick() {
         var min = Math.floor(this.secondsRemaining / 60);
         var sec = this.secondsRemaining - (min * 60);
+        if (sec < 10) {
+            sec = "0" + sec;
+        }
+        if (min < 10) {
+            min = "0" + min;
+        }
+
         this.setState({
             minutes: min,
             seconds: sec
         })
-        if (sec < 10) {
-            this.setState({
-                seconds: "0" + this.state.seconds,
-            })
-        }
-        if (min < 10) {
-            this.setState({
-                value: "0" + min,
-            })
-        }
+
         if (min === 0 & sec === 0) {
             try {
-                bell.play();
-            } catch(err){
+                
+
+
+                
+                var promise = bell.play();
+                
+                if (promise !== undefined) {
+                    
+                    promise.then(_ => {
+                        
+                        bell.play();
+                    // Autoplay started!
+                
+                  }).catch(error => {
+                console.log(error)
+                    // Autoplay was prevented.
+                
+                    // Show a "Play" button so that user can start playback.
+                
+                  });
+                
+                }
+
+
+
+
+
+
+
+            } catch (err) {
                 console.log(err);
             }
             alert("time is up")

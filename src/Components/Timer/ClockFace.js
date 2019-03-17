@@ -3,7 +3,7 @@ import React from 'react';
 class ClockFace extends React.Component {
   render() {
     let clockStyle={
-      fontSize:"7vw",
+      fontSize:"15vw",
       marginBlockStart: '.1em',
       marginBlockEnd: '.1em',
       color: 'white',
@@ -11,7 +11,7 @@ class ClockFace extends React.Component {
     }
     return (
       <div style={clockStyle}>
-        <h1 style={clockStyle}> {this.props.minutes}:{this.props.seconds}</h1>
+        <h1  style={clockStyle}> {this.props.minutes}:{this.props.seconds}</h1>
       </div>
     );
   }

@@ -7,7 +7,7 @@ class Task extends React.Component {
                 <h1>
                     {this.props.name}
                 </h1>
-            <button className="btn" onClick={this.props.click}>
+            <button className="btn btn-success" onClick={this.props.click}>
                     Completed!
             </button>
             </header>

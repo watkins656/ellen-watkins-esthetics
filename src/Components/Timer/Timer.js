@@ -15,7 +15,7 @@ class Timer extends React.Component {
         }
         this.state = {
             seconds: '00',   // responsible for the seconds 
-            minutes:min  // responsible for the minutes
+            minutes: min  // responsible for the minutes
         }
         this.secondsRemaining = '';
         this.intervalHandle = '';
@@ -38,7 +38,7 @@ class Timer extends React.Component {
             if (min < 10) {
                 min = "0" + min;
             }
-    
+
             this.setState({
                 seconds: '00',   // responsible for the seconds 
                 minutes: min  // responsible for the minutes
@@ -70,40 +70,14 @@ class Timer extends React.Component {
             minutes: min,
             seconds: sec
         })
-
         if (min === 0 & sec === 0) {
-            try {
-                
-
-
-                
-                var promise = bell.play();
-                
-                if (promise !== undefined) {
-                    
-                    promise.then(_ => {
-                        
-                        bell.play();
-                    // Autoplay started!
-                
-                  }).catch(error => {
-                console.log(error)
-                    // Autoplay was prevented.
-                
-                    // Show a "Play" button so that user can start playback.
-                
-                  });
-                
-                }
-
-
-
-
-
-
-
-            } catch (err) {
-                console.log(err);
+            var promise = bell.play();
+            if (promise !== undefined) {
+                promise.then(_ => {
+                    bell.play();
+                }).catch(error => {
+                    console.log(error)
+                });
             }
             alert("time is up")
             clearInterval(this.intervalHandle);

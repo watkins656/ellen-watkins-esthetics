@@ -2,7 +2,7 @@ import React from 'react';
 import TimerInput from './TimerInput';
 import ClockFace from './ClockFace';
 import StartButton from './StartButton';
-import Bell from'./bell.mp3';
+import Bell from './bell.mp3';
 let bell = new Audio(Bell);
 
 class Timer extends React.Component {
@@ -66,7 +66,11 @@ class Timer extends React.Component {
             })
         }
         if (min === 0 & sec === 0) {
-            bell.play();
+            try {
+                bell.play();
+            } catch(err){
+                console.log(err);
+            }
             alert("time is up")
             clearInterval(this.intervalHandle);
         }
@@ -78,9 +82,9 @@ class Timer extends React.Component {
         this.secondsRemaining = time * 60;
     }
 
-componentWillUnmount(){
-    clearInterval(this.intervalHandle);
-}
+    componentWillUnmount() {
+        clearInterval(this.intervalHandle);
+    }
 
     render() {
         return (

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router';
+
 import Timer from '../Timer/Timer.js'
 import CurrentTask from '../Task/Task.js'
 import '../../App.css';
@@ -13,7 +15,7 @@ class Routine extends Component {
     started: false,
     routineTimerRunning: false,
     taskTimerRunning: false,
-
+    manageRoutine: false,
   }
 
   componentWillMount() {
@@ -21,6 +23,14 @@ class Routine extends Component {
       currentRoutine: this.props.routine,
       currentTask: this.props.routine.tasks[0]
     })
+  }
+
+  toggle(prop) {
+    let current = this.state[prop];
+
+    this.setState({
+      [prop]: !current
+    });
   }
   taskIterator = () => {
     let newIndex = this.state.taskIndex + 1;
@@ -53,6 +63,12 @@ class Routine extends Component {
       background: 'black',
       color: 'white'
     }
+
+    if (this.state.manageRoutine) {
+      return <Redirect to="/manageRoutine" />
+  }
+  
+
     return !this.state.currentTask ?
       (false)
       :
@@ -84,6 +100,7 @@ class Routine extends Component {
 
         <div className="row">
           <div className="col border">
+            <button className="btn btn-info btn-lg btn-block" onClick={() => this.toggle('manageRoutine')}>Manage This Routine</button>
             <button className="btn btn-danger btn-lg btn-block" onClick={this.props.back.bind(this)}>Back</button>
           </div>
         </div>

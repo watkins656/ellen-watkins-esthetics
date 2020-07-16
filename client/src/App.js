@@ -226,6 +226,7 @@ let getTotalTime = (routine) => {
   routine.totalTime = totalTime;
 }
 
+
 Object.keys(routines).forEach(routine => {
   getTotalTime(routines[routine])
 });

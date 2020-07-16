@@ -3,7 +3,7 @@ import Timer from './Components/Timer/Timer.js'
 import CurrentTask from './Components/Task/Task.js'
 import './App.css';
 import Routine from './Components/Routine/Routine'
-
+import logo from './img/ellen-logo.PNG';
 import routines from './routines';
  const dummy = {
   night: {
@@ -249,105 +249,29 @@ const seed = (task) => {
 }
 
 
-class App extends Component {
 
-  state = {
-    currentRoutine: null,
-    taskIndex: -1,
-    currentTask: null,
-    started: false,
-    routineTimerRunning: false,
-    taskTimerRunning: false,
-
-  }
-
-
-  taskIterator = () => {
-    let newIndex = this.state.taskIndex + 1;
-    this.setState({
-      currentTask: this.state.currentRoutine.tasks[newIndex],
-      taskIndex: newIndex
-    })
-
-  }
-  back() {
-    this.setState({
-      currentRoutine: null,
-      taskIndex: -1,
-      currentTask: null,
-      started: false,
-      routineTimerRunning: false,
-      taskTimerRunning: false,
-    })
-  }
-  taskCompleted = () => {
-    this.taskIterator()
-  }
-
-  start = () => {
-    let newIndex = this.state.taskIndex + 1;
-    this.setState({
-      started: true,
-      routineTimerRunning: true,
-      taskIndex: newIndex
-    })
-
-  }
-  routineSelector = (e) => {
-    e.preventDefault()
-    let name = (e.target.id)
-    let routine = getRoutine(name);
-    console.log(routine);
-    this.setState({
-      currentRoutine: routine
-    })
-    function getRoutine(name) {
-      console.log("getting routine for " + name);
-      return routines[name]
-    };
-  }
-
-  render() {
-    console.log('render with currentRoutine: ' + this.state.currentRoutine);
-
-    return (
-
-      <div className="container">
-
-        {this.state.currentRoutine === null ? (
-          <div>
-            <div className="row">
-              <div className="col-12">
-
-                <h1 className="text-center">
-                  Choose a routine
-            </h1>
-
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-12">
-                <button className="btn" onClick={this.routineSelector.bind(this)} id="morning">Morning Routine</button>
-                <button className="btn" onClick={this.routineSelector.bind(this)} id="night">Night Routine</button>
-                <button className="btn" onClick={this.routineSelector.bind(this)} id="basement">Basement Routine</button>
-                <button className="btn" onClick={this.routineSelector.bind(this)} id="office">Office Routine</button>
-                <button className="btn" onClick={this.routineSelector.bind(this)} id="once">One-and-Done Routine</button>
-              </div>
-            </div>
-          </div>
-        ) : <Routine routine={this.state.currentRoutine} back={this.back.bind(this)} />}
-        <div className="row">
-
-          <div className="col-12">
-            <strong className="text-center">
-              Copyright Dustin Watkins 2019
-              </strong>
-          </div>
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="ellen-logo" alt="logo" />
+        <div  className="fall">
+          Coming Fall 2020
         </div>
-      </div>
-
-    )
-  }
+        <div className="luxury">
+          luxury skin services + treatments
+        </div>
+        <a
+          className="App-link"
+          href="https://linktr.ee/estheticianellen"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkTree
+        </a>
+      </header>
+    </div>
+  );
 }
 
 export default App;

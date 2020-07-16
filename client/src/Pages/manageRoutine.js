@@ -8,6 +8,10 @@ class Routine extends Component {
     currentRoutine: null,
   }
 
+  createTask(){
+    alert('task creation here')
+  }
+
   componentWillMount() {
     this.setState({
       currentRoutine: this.props.routine,
@@ -27,8 +31,9 @@ class Routine extends Component {
       <div >
         <div className="row">
           <div className="col border" >
-           
-           
+           <button class="btn" onClick={this.createTask}>
+                    <span class="badge badge-primary">Create new task</span>
+           </button>
             
           </div>
         </div>

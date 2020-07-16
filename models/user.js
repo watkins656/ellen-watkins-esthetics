@@ -4,7 +4,12 @@ module.exports = function (sequelize, DataTypes) {
     email: DataTypes.STRING,
     password: DataTypes.STRING
   });
-  Task.belongsToMany(User, { through: 'UserTask' });
-  User.belongsToMany(Task, { through: 'UserTask' });
+  
+
+  User.associate = function(models) {
+    // Associating User with Posts
+    User.hasMany(models.Routine, {});
+  };
+
   return User;
 };

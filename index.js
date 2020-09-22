@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const db = require("./models");
+// const db = require("./models");
 
 
 const app = express();
@@ -26,8 +26,7 @@ app.get('*', (req, res) => {
 });
 
 const port = process.env.PORT || 5000;
-db.sequelize.sync().then(function () {
+// db.sequelize.sync().then(function () {
     app.listen(port);
     console.log(`Server listening on ${port}`);
-require('./seed')
-}); 
+// }); 

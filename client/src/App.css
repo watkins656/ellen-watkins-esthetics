@@ -2,15 +2,42 @@
   text-align: center;
 }
 
+.services-treatments-page {
+  text-align: center;
+  background-image: url("./img/image.png");
+  background-repeat: repeat;
+  background-size: 60vmin;
+}
+
+.nav-first-column, .nav-second-column, .nav-third-column {}
+
+.ellen-booking-logo {
+  height: 50vmin;
+  margin-top: 5vmin;
+}
+
 .ellen-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 60vmin;
+  margin: 5vmin 5vmin 5vmin 5vmin;
+  border-style: outset;
+  border-width: 3px;
+  border-left-width: 10px;
+  border-right-width: 10px;
+  border-color: black;
+}
+
+.ellen-video {
+  width: 100%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.wrap-text {
+  white-space: normal;
 }
 
 .App-header {
@@ -24,18 +51,269 @@
   color: white;
 }
 
+.contact-table-header {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(4px + 2vw);
+  color: white;
+}
+
+.book-appointment-header {
+  margin-top: 5vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
 .App-link {
   color: #fcd3db;
   font-style: italic;
+  font-weight: bolder;
+  text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75517px 0.958851px 0px, rgb(0, 0, 0) 1.0806px 1.68294px 0px, rgb(0, 0, 0) 0.141474px 1.99499px 0px, rgb(0, 0, 0) -0.832294px 1.81859px 0px, rgb(0, 0, 0) -1.60229px 1.19694px 0px, rgb(0, 0, 0) -1.97998px 0.28224px 0px, rgb(0, 0, 0) -1.87291px -0.701566px 0px, rgb(0, 0, 0) -1.30729px -1.5136px 0px, rgb(0, 0, 0) -0.421592px -1.95506px 0px, rgb(0, 0, 0) 0.567324px -1.91785px 0px, rgb(0, 0, 0) 1.41734px -1.41108px 0px, rgb(0, 0, 0) 1.92034px -0.558831px 0px;
 }
-.luxury{
-  font-style: italic;
-}
-.fall{
-  margin-top: 30px;
-  font-style: italic;
 
+.luxury {}
+
+.fall {
+  margin: 30px 10vw 30px 10vw;
 }
+
+.menu {
+  background-color: #9f9f9e;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#menu-images-carousel-wrapper {
+  width: 100%;
+  background-image: url("./img/image.png");
+  background-repeat: repeat;
+  background-size: 60vmin;
+  justify-content: center;
+}
+
+#menu-images-carousel {
+  margin: auto;
+  background-image: url("./img/image.png");
+  background-repeat: repeat;
+  background-size: 60vmin;
+  width: 80%;
+}
+
+.menu-image {
+  height: 75vmin
+}
+
+.menu-header {
+  background-color: #fcd3db;
+  color: black;
+  width: 20%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+#menu-item-descriptions-wrapper {
+  width: 80%;
+  margin: 5vmin auto 5vmin auto;
+  background-image: url("./img/leaf.png");
+  background-repeat: repeat;
+  background-size: 28vmin;
+  /* background-color: #9c9b99; */
+  justify-content: center;
+  padding-bottom: 20vmin;
+}
+
+#menu-item-descriptions-title {
+  color: white;
+  font-size: 8vmin;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  display: inline-block;
+  padding: .3em;
+  margin: .2em .2em -.8em .2em;
+  text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75517px 0.958851px 0px, rgb(0, 0, 0) 1.0806px 1.68294px 0px, rgb(0, 0, 0) 0.141474px 1.99499px 0px, rgb(0, 0, 0) -0.832294px 1.81859px 0px, rgb(0, 0, 0) -1.60229px 1.19694px 0px, rgb(0, 0, 0) -1.97998px 0.28224px 0px, rgb(0, 0, 0) -1.87291px -0.701566px 0px, rgb(0, 0, 0) -1.30729px -1.5136px 0px, rgb(0, 0, 0) -0.421592px -1.95506px 0px, rgb(0, 0, 0) 0.567324px -1.91785px 0px, rgb(0, 0, 0) 1.41734px -1.41108px 0px, rgb(0, 0, 0) 1.92034px -0.558831px 0px;
+}
+
+#menu-item-descriptions-subtitle {
+  font-style: italic;
+  font-size: 4vmin;
+}
+
+.menu-item-descriptions-accordion {
+  width: 70%;
+  margin: auto;
+}
+
+.menu-item-description {
+  background-image: url("./img/grey.png");
+  background-repeat: repeat;
+  background-size: 2em;
+  color: darkgray;
+  display: inline-block;
+  text-align: center;
+}
+
+.menu-item-text {
+  color: #545454;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 4.5vmin;
+  text-shadow: rgb(252, 211, 219) 2px 0px 0px, rgb(252, 211, 219) 1.75517px 0.958851px 0px, rgb(252, 211, 219) 1.0806px 1.68294px 0px, rgb(252, 211, 219) 0.141474px 1.99499px 0px, rgb(252, 211, 219) -0.832294px 1.81859px 0px, rgb(252, 211, 219) -1.60229px 1.19694px 0px, rgb(252, 211, 219) -1.97998px 0.28224px 0px, rgb(252, 211, 219) -1.87291px -0.701566px 0px, rgb(252, 211, 219) -1.30729px -1.5136px 0px, rgb(252, 211, 219) -0.421592px -1.95506px 0px, rgb(252, 211, 219) 0.567324px -1.91785px 0px, rgb(252, 211, 219) 1.41734px -1.41108px 0px, rgb(252, 211, 219) 1.92034px -0.558831px 0px;
+}
+
+.menu-title {
+  color: white;
+  text-align: center;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+
+.menu-card-header-text {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 6vmin;
+  color: black;
+}
+
+a:hover {
+  color: #fcd3db;
+  text-decoration: underline;
+  text-decoration-color: #fcd3db;
+}
+
+.footer-pink {
+  font-size: xx-large;
+  font-weight: bolder;
+  background-color: #fcd3db;
+  justify-content: center;
+  position: unset;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.footer-pink a {
+  color: #fcd3db
+}
+
+.service-menu-header-card {
+  font-weight: 800;
+}
+
+.clear {
+  clear: both;
+}
+
+.service-menu-card {
+  border: 10px solid #9c9b99;
+  border-radius: 25px;
+  background-image: url('./img/linen.png');
+}
+
+.Booking-text {
+  margin: 5vmin 15% 0 15%;
+  font-weight: bolder;
+  font-size: 90%;
+  text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75517px 0.958851px 0px, rgb(0, 0, 0) 1.0806px 1.68294px 0px, rgb(0, 0, 0) 0.141474px 1.99499px 0px, rgb(0, 0, 0) -0.832294px 1.81859px 0px, rgb(0, 0, 0) -1.60229px 1.19694px 0px, rgb(0, 0, 0) -1.97998px 0.28224px 0px, rgb(0, 0, 0) -1.87291px -0.701566px 0px, rgb(0, 0, 0) -1.30729px -1.5136px 0px, rgb(0, 0, 0) -0.421592px -1.95506px 0px, rgb(0, 0, 0) 0.567324px -1.91785px 0px, rgb(0, 0, 0) 1.41734px -1.41108px 0px, rgb(0, 0, 0) 1.92034px -0.558831px 0px;
+}
+
+.faq-table {
+  text-align: left;
+  vertical-align: top;
+  width: 80%;
+}
+
+.ellen-video-wide {
+  width: 100%
+}
+  .ellen-video-narrow {
+  width: 100%
+}
+
+.ellen-video-container {
+  background-color: black;
+  width: 60%;
+  margin: 30px;
+  max-height: 70%;
+}
+.navbar-toggler{
+  display: none;
+}
+
+@media screen and (max-width: 541px) {
+  .ellen-video {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 772px) {
+  .ellen-video {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 542px) {
+  .ellen-video-narrow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 771px) {
+  .ellen-video-wide {
+    display: none;
+  }
+  .ellen-video-container {
+    width: 50%
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .faq-table {
+    width: 100%;
+  }
+}
+
+.ellen-reviews {
+  max-width: 80%;
+  margin: 5vh
+}
+
+.about-ellen-text {
+  margin: 40px;
+  font-weight: bold;
+  font-size: large;
+}
+
+.faq-table-question {
+  vertical-align: top;
+  padding: 0.5em 1em 1em 1em;
+  width: 25%;
+}
+
+.faq-table-answer {
+  vertical-align: top;
+  padding: 0.5em 1em 1em 1em;
+}
+
+.contact-table {
+  text-align: left;
+}
+
+.contact-table-item {
+  padding: 0 1em 0 1em;
+}
+
+.pink-text {
+  color: #fcd3db;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -44,3 +322,4 @@
     transform: rotate(360deg);
   }
 }
+

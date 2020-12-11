@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import { Navbar, Nav, NavDropdown,Container, NavbarBrand, Carousel, Accordion, Card, Button } from 'react-bootstrap'
-import logo from '../img/ellen-at-lazer.png';
+import logo from '../img/biz-cards.jpeg';
 import EllenNavbar from '../Components/Navbar/Ellen-Navbar';
 import BookNowFooter from '../Components/Navbar/Book-Now-Footer';
 

@@ -37,9 +37,6 @@ function App() {
               <td class="faq-table-answer pink-text">
                 For first time clients, I always recommend starting with a Custom Facial.  
                 The Custom Facial will give me a chance to get to know your skin.  This facial is designed to nourish your skin and is unique to you.  The products chosen will be based upon my analysis of your skin.  
-                The Back Facial is great for those with sun damage, dry skin, and acne breakouts, or for those who workout.  
-                The Clarifying Facial is designed to help treat and soothe those with acneic skin, break outs and blackheads, and is also great for teen skin.  
-                The Anti-Aging Facial is for those with aging skin concerns such as fine lines and wrinkles, but is also preventative in nature.  
                 </td>
             </tr  >
             <tr>

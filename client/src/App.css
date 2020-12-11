@@ -9,6 +9,10 @@
   background-size: 60vmin;
 }
 
+.ellen-picture-homepage{
+  max-width: 50%;
+}
+
 .nav-first-column, .nav-second-column, .nav-third-column {}
 
 .ellen-booking-logo {
@@ -16,14 +20,38 @@
   margin-top: 5vmin;
 }
 
+.ellen-homepage-image-wrapper {
+  width: 85%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.ellen-homepage-image {
+  align-self:flex-start;
+  padding: 5px 5px 50px 5px;
+  width: 475px;
+  max-width: 80%;
+  max-height: 80%;
+  height: auto;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+
 .ellen-logo {
   height: 60vmin;
   margin: 5vmin 5vmin 5vmin 5vmin;
-  border-style: outset;
-  border-width: 3px;
-  border-left-width: 10px;
-  border-right-width: 10px;
-  border-color: black;
 }
 
 .ellen-video {
@@ -100,6 +128,7 @@
 
 #menu-images-carousel {
   margin: auto;
+  margin-top: 30px;
   background-image: url("./img/image.png");
   background-repeat: repeat;
   background-size: 60vmin;
@@ -107,7 +136,7 @@
 }
 
 .menu-image {
-  height: 75vmin
+  height: 50vmin
 }
 
 .menu-header {
@@ -233,7 +262,8 @@ a:hover {
 .ellen-video-wide {
   width: 100%
 }
-  .ellen-video-narrow {
+
+.ellen-video-narrow {
   width: 100%
 }
 
@@ -243,34 +273,15 @@ a:hover {
   margin: 30px;
   max-height: 70%;
 }
-.navbar-toggler{
+
+.navbar-toggler {
   display: none;
 }
 
-@media screen and (max-width: 541px) {
-  .ellen-video {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 772px) {
-  .ellen-video {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 542px) {
-  .ellen-video-narrow {
-    display: none;
-  }
-}
 
 @media screen and (max-width: 771px) {
-  .ellen-video-wide {
-    display: none;
-  }
-  .ellen-video-container {
-    width: 50%
+  .ellen-picture-homepage {
+    max-width: 80%;
   }
 }
 
@@ -322,4 +333,3 @@ a:hover {
     transform: rotate(360deg);
   }
 }
-
